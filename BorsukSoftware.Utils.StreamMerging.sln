@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorsukSoftware.Utils.StreamMerging", "BorsukSoftware.Utils.StreamMerging\BorsukSoftware.Utils.StreamMerging.csproj", "{A678A281-44FD-4B64-A279-7C62F71B941C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorsukSoftware.Utils.StreamMerging.Tests", "BorsukSoftware.Utils.StreamMerging.Tests\BorsukSoftware.Utils.StreamMerging.Tests.csproj", "{0D4EBFA5-E8D6-4F15-8545-5746E4F88B96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A678A281-44FD-4B64-A279-7C62F71B941C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A678A281-44FD-4B64-A279-7C62F71B941C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A678A281-44FD-4B64-A279-7C62F71B941C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A678A281-44FD-4B64-A279-7C62F71B941C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4EBFA5-E8D6-4F15-8545-5746E4F88B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4EBFA5-E8D6-4F15-8545-5746E4F88B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4EBFA5-E8D6-4F15-8545-5746E4F88B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4EBFA5-E8D6-4F15-8545-5746E4F88B96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DB655C4-7F4A-4E19-B5C5-5A0994CCDE12}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/BorsukSoftware.Utils.StreamMerging/bin
+/BorsukSoftware.Utils.StreamMerging/obj
+/BorsukSoftware.Utils.StreamMerging.Tests/bin
+/BorsukSoftware.Utils.StreamMerging.Tests/obj
