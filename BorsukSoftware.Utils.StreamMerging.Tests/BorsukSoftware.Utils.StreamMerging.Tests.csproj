@@ -1,12 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
     <RootNamespace>BorsukSoftware.Utils.StreamMerging</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\CompressedFiles\chunk-0" />
+    <None Remove="Resources\CompressedFiles\chunk-1" />
+    <None Remove="Resources\CompressedFiles\chunk-2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CompressedFiles\chunk-0" />
+    <EmbeddedResource Include="Resources\CompressedFiles\chunk-1" />
+    <EmbeddedResource Include="Resources\CompressedFiles\chunk-2" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.2.0" />

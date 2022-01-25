@@ -73,8 +73,8 @@ namespace BorsukSoftware.Utils.StreamMerging
                 return 0;
 
             var count = buffer.Length;
-            // Handle simple case
             int totalBytesRead = 0;
+
             while (true)
             {
                 int bytesToReadInCall = count - totalBytesRead;
@@ -83,11 +83,24 @@ namespace BorsukSoftware.Utils.StreamMerging
                 int bytesRead = _streamEnumerator.Current.Read(subBuffer);
 
                 totalBytesRead += bytesRead;
+                _currentPosition += totalBytesRead;
+
+                // In this case, we've received everything from the stream
+                // that we've asked for, so time to return...
                 if (totalBytesRead == count || bytesRead == bytesToReadInCall)
                 {
-                    _currentPosition += totalBytesRead;
                     return totalBytesRead;
                 }
+
+                // At this point, we're in a potential quandry... we're not, at this point,
+                // entirely sure whether or not we've hit the end of the stream or simply that
+                // that read decided to return early...
+                if (bytesRead > 0)
+                    continue;
+
+                // At this point, we've tried to read some bytes but we've received nothing,
+                // so we can only assume that the stream truly has finished and that it's
+                // time to move to the next one
 
                 if (this.DisposeUnderlyingStreams)
                     _streamEnumerator.Current.Dispose();
