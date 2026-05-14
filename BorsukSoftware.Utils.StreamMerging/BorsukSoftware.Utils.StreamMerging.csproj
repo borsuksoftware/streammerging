@@ -7,7 +7,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>logo.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>Borsuk Software 2021</Copyright>
+    <Copyright>Borsuk Software 2026</Copyright>
     <Authors>Borsuk Software</Authors>
     <Company>Borsuk Software</Company>
   </PropertyGroup>

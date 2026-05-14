@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0
+
+ARG PACKAGE_VERSION=1.0.0
+ARG FILE_VERSION=1.0.0
+
+WORKDIR /app
+
+COPY ./BorsukSoftware.Utils.StreamMerging /app/BorsukSoftware.Utils.StreamMerging
+COPY ./BorsukSoftware.Utils.StreamMerging.Tests /app/BorsukSoftware.Utils.StreamMerging.Tests
+COPY ./BorsukSoftware.Utils.StreamMerging.sln /app/BorsukSoftware.Utils.StreamMerging.sln
+COPY ./LICENSE /app/LICENSE
+COPY ./logo.png /app/logo.png
+COPY ./README.md /app/README.md
+
+# Run the tests
+WORKDIR /app/BorsukSoftware.Utils.StreamMerging.Tests
+RUN dotnet test -c Release
+
+# Build the package
+WORKDIR /app/BorsukSoftware.Utils.StreamMerging
+RUN dotnet pack -o ../output -c Release -p:packageVersion=${PACKAGE_VERSION} -p:Version=${FILE_VERSION}
