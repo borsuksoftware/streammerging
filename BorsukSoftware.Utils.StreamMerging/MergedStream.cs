@@ -142,6 +142,10 @@ namespace BorsukSoftware.Utils.StreamMerging
                     return totalBytesRead;
                 }
 
+                // Partial read from the current stream - retry before assuming it's exhausted
+                if (bytesRead > 0)
+                    continue;
+
                 if (this.DisposeUnderlyingStreams)
                     _streamEnumerator.Current.Dispose();
 
